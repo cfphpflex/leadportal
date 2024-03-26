@@ -1,0 +1,10 @@
+.mainViewWrapper {
+  /* display: flex; */
+  /* flex:1; */
+  height: 100%;
+  width:100%;
+  /* flex-direction:column;
+  align-content: center;
+  justify-content: space-between; */
+  background-color:#f6fbfc;
+}

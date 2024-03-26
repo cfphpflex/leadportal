@@ -1,0 +1,95 @@
+ul {
+  padding: 0px;
+}
+.headerWrapper {
+  display: flex;
+  flex: 0 1 auto;
+  height:60px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(5, 94, 108);
+  background: linear-gradient( 90deg, rgb(1, 1, 14) 0%, rgb(13, 20, 239) 100% );
+  padding: 5px 40px 5px 20px;
+}
+.svgFrame {
+  height: 31px;
+}
+.userName {
+  color: rgb(224, 224, 224);
+  opacity: 0.8;
+  font-size: 18px;
+}
+.link {
+  color: rgb(128, 128, 128);
+  font-size: 18px;
+  text-decoration: none;
+  margin: 5px 0px 5px 0px;
+  text-align: start;
+}
+@media (max-width: 600px) {
+  .svgframe {
+    height: 20px;
+  }
+  .linkWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .link {
+    width: 60px;
+  }
+}
+#menuToggle {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+#menuToggle input {
+  display: block;
+  width: 400px;
+  height: 32px;
+  position: absolute;
+  top: -2px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 5; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+.dropdownWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.arrowWrapper {
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+}
+.headerArrow {
+  height: 10px;
+}
+#menuToggle input:checked ~ .headerArrow {
+  transform: rotate(180deg);
+}
+.menu {
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
+  position: absolute;
+  background: #ffffff;
+  display: none;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0px 0px 7px 7px;
+  margin-top: 26px;
+  padding: 0px 20px 15px 20px;
+  transform: translateX(-78px);
+  /* to stop flickering of text in safari */
+  /* transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); */
+}
+
+#menuToggle input:checked ~ .menu {
+  display: flex;
+  flex-direction: column;
+}
